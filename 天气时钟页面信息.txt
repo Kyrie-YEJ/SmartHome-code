@@ -1,0 +1,21 @@
+知心天气数据：
+API私钥：Savcdz4uhjRLsSUOF
+天气实况接口地址：https://api.seniverse.com/v3/weather/now.json?key=Savcdz4uhjRLsSUOF&location=maoming&language=zh-Hans&unit=c
+
+ESP32指令：
+部分1：
+	1、AT		     	//测试AT
+	2、AT+CWMODE=1    	//设置为Station模式
+	3、AT+RST	    	//模块重启
+	4、AT+CIPMUX=0		//设置单路连接
+	5、AT+CWJAP=“WiFi名"，”WIFI密码“	//连接WiFi
+部分2：
+	6、AT+CIPSTART="TCP","api.seniverse.com",80	//和心知天气连接
+	7、AT+CIPMODE=1	//开启透传模式
+	8、AT+CIPSEND		//开始透传，出现”>“
+	9、发送：GET https://api.seniverse.com/v3/weather/now.json?key=私钥&location=城市&language=zh-Hans&unit=c		//向网页请求天气数据
+	
+
+
+
+	

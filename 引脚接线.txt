@@ -1,0 +1,64 @@
+1、LCD
+	SDA->PA6
+	SCL->PA7
+	GND->GND
+	VCC->5V
+2、OLED
+	SDA->PB15
+	SCL->PB13
+	GND->GND
+	VCC->3.3V
+3、舵机
+	PWM->PC6  橙
+	GND->GND  棕
+	VCC->5V	     红
+4、步进电机驱动
+	IN1->PG3
+	IN2->PG4
+	IN3->PG5
+	IN4->PG6
+5、MQ135
+	AO->PB0
+	DO->不接
+	GND->GND  
+	VCC->5V	     
+6、人体红外
+	OUT->PE2
+	GND->GND  
+	Vin->5V	 
+
+7、DHT11
+	DAT->PG11
+	GND->GND
+	VCC->5V
+8、光敏电阻传感器
+	AO->PA1
+	GND->GND
+	VCC->3.3V
+9、JQ8900(MP3模块)
+	TX->（不接）
+	RX->PB10
+	SPK-->喇叭+
+	SPK+->喇叭-
+	GND->GND  
+	VCC->5V	     
+10、语音识别模块
+	TX->PB11
+	RX->PB10(接JQ8900)
+	GND->GND  
+	5V->5V	---------------(Usart3)中断---------------
+11、ESP8266模块
+	Vin->5V
+	GND->GND
+	RST->PE1
+	TX->PA3
+	RX->PA2      ---------------(Usart2)中断---------------
+12、sim900a通信模块
+	5VT->PA10(RX)
+	5VR->PA9(TX)    
+	GND->GND
+	vcc5->VCC-5V  ----------------(Usart1)中断---------------
+13、串口调试
+	PC10->TTL-RX
+	PC11->TTL-TX   ----------------(Uart4)无中断---------------
+	
